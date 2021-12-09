@@ -33,23 +33,36 @@ int main()
     return 0;
 }
 */
-//Ejercicio 5
+/*//Ejercicio 5 Arreglar para negativos
 int main()
 {
-    short int vabA;
-    short int vabB;
+    float vabA;
+    float vabB;
     float divi;
     cout << "Ingrese un numero A: " <<endl;
     cin >> vabA;
     cout << "Ingrese un numero B: " <<endl;
     cin >> vabB;
-    divi= float vabB/2
-    if((vabA%vabB)>=divi){
-        cout<<vabA<<"/"<<vabB<<"="<<(vabA/vabB)+1<<endl;
+    divi=vabA/vabB;
+    if(abs(fmod(divi,1))>= 0.5){
+        cout<<vabA<<"/"<<vabB<<"="<<ceil(divi)<<endl;
     }
     else{
-        cout<<vabA<<"/"<<vabB<<"="<<(vabA/vabB)<<endl;
+        cout<<vabA<<"/"<<vabB<<"="<<floor(divi)<<endl;
     }
-
     return 0;
-}
+}*/
+/*//Ej 7
+int main()
+{
+    unsigned short int num;
+    int suma=0;
+    cout<<"Ingrese un numero: "<<endl;
+    cin>>num;
+    for(int i=0;i<=num;i++)
+    {
+        suma+=i;
+    }
+    cout<<"La sumatoria de 0 hasta "<<num<<" es "<<suma<<endl;
+return 0;
+}*/
