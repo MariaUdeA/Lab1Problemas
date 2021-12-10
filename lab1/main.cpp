@@ -180,7 +180,7 @@ int main(){
     }
 
 }*/
-//Ej 23 Minimo comun multiplo entre A y B arreglar
+/*//Ej 23 Minimo comun multiplo entre A y B
 //Se utiliza la ecuación mcm=(A*B)/MCD(A,B)
 int main(){
     int vabA;
@@ -195,7 +195,38 @@ int main(){
             mcd=i;
         }
     }
-    mcd=(vabA*vabB) / (int) mcd;
-    cout<<"El minimo comun multiplo es: "<<(vabA*vabB) / mcd<<endl;
+    mcd=(vabA*vabB) / mcd;
+    cout<<"El minimo comun multiplo entre "<<vabA<<" y "<<vabB<<" es "<<mcd<<endl;
 
+}*/
+/*//Ej 25 Numero de digitos
+int main(){
+    int num;
+    int digits=0;
+    int num2;
+    cout<<"Ingrese un numero entero"<<endl;
+    cin>>num;
+    for (num2=num;num2!=0;num2=num2/10){
+        digits ++;
+    }
+    cout<<"El numero "<<num<<" tiene "<<digits<<" digitos"<<endl;
+return 0;
+}*/
+//Ej 27
+int main(){
+    float num1;
+    float num2;
+    char op;
+    float res;
+    cout<<"Ingrese el primer numero:"<<endl;
+    cin>>num1;
+    cout<<"Ingrese una operacion:"<<endl;
+    cin>>op;
+    cout<<"Ingrese otro numero:"<<endl;
+    cin>>num2;
+    res=(op=='+')?num1+num2:(op=='-')?num1-num2:(op=='x')?num1*num2:(op=='/')?num1/num2:0;
+    //si la operacion no es correcta, se pone que el resultado es cero
+    cout<<num1<<op<<num2<<'='<<res<<endl;
+
+return 0;
 }
