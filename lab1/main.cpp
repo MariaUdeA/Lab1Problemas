@@ -18,8 +18,8 @@ int main()
 /*//Ej 3 Mayor entre A y B
 int main()
 {
-    short int vabA;
-    short int vabB;
+    int vabA;
+    int vabB;
     cout << "Ingrese un numero A: " <<endl;
     cin >> vabA;
     cout << "Ingrese un numero B: " <<endl;
@@ -164,3 +164,38 @@ int main(){
 
 return 0;
 }*/
+/*//Ej 21 Mayus a minus, minus a Mayus
+//Tambien se puede utilizar tolower y toupper(!!)
+int main(){
+    char letra;
+    cout<<"Ingrese una letra: "<<endl;
+    cin>>letra;
+    if (letra>=65 && letra<=90){
+        letra=letra+32;
+        cout<<"Letra convertida: "<< letra <<endl;
+    }
+    else{
+        letra=letra-32;
+        cout<<"Letra convertida: "<<letra<<endl;
+    }
+
+}*/
+//Ej 23 Minimo comun multiplo entre A y B arreglar
+//Se utiliza la ecuación mcm=(A*B)/MCD(A,B)
+int main(){
+    int vabA;
+    int vabB;
+    int mcd;
+    cout << "Ingrese un numero A: " <<endl;
+    cin >> vabA;
+    cout << "Ingrese un numero B: " <<endl;
+    cin >> vabB;
+    for (int i=1;i<=vabA/2 || i<=vabB/2 ;i++){
+        if (vabA % i==0 && vabB % i==0){
+            mcd=i;
+        }
+    }
+    mcd=(vabA*vabB) / (int) mcd;
+    cout<<"El minimo comun multiplo es: "<<(vabA*vabB) / mcd<<endl;
+
+}
