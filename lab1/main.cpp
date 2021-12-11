@@ -34,7 +34,7 @@ int main()
     return 0;
 }
 */
-/*//Ej 5 A/B con redondeo (arreglar para negativos)
+/*//Ej 5 A/B con redondeo
 int main()
 {
     float vabA;
@@ -45,11 +45,17 @@ int main()
     cout << "Ingrese un numero B: " <<endl;
     cin >> vabB;
     divi=vabA/vabB;
-    if(abs(fmod(divi,1))>= 0.5){
+    if(abs(fmod(divi,1))>= 0.5 && divi>=0){
         cout<<vabA<<"/"<<vabB<<"="<<ceil(divi)<<endl;
     }
-    else{
+    else if(fmod(divi,1)<0.5 && divi>=0){
         cout<<vabA<<"/"<<vabB<<"="<<floor(divi)<<endl;
+    }
+    else if(abs(fmod(divi,1))>= 0.5 && divi<0){
+        cout<<vabA<<"/"<<vabB<<"="<<floor(divi)<<endl;
+    }
+    else if ((abs(fmod(divi,1)))< 0.5 && divi<0){
+        cout<<vabA<<"/"<<vabB<<"="<<ceil(divi)<<endl;
     }
     return 0;
 }*/
@@ -212,7 +218,7 @@ int main(){
     cout<<"El numero "<<num<<" tiene "<<digits<<" digitos"<<endl;
 return 0;
 }*/
-//Ej 27
+/*//Ej 27 calculadora +-/x
 int main(){
     float num1;
     float num2;
@@ -229,4 +235,22 @@ int main(){
     cout<<num1<<op<<num2<<'='<<res<<endl;
 
 return 0;
-}
+}*/
+/*//Ej 29 Maquina adivina un numero
+int main(){
+    int abajo=0;
+    int arriba=100;
+    char sign='n';
+    while (sign!='='){
+        cout<<"Es el numero igual mayor o menor a "<<(abajo+arriba)/2<<endl;
+        cin>>sign;
+        if (sign=='<'){
+            arriba=(arriba+abajo)/2;
+        }
+        else if (sign=='>'){
+            abajo=(arriba+abajo)/2;
+        }
+    }
+    cout<<"Su numero es el "<<(arriba+abajo)/2<<endl;
+return 0;
+}*/
