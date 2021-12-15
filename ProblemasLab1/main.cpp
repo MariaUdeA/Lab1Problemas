@@ -23,7 +23,7 @@ int main()
 
     return 0;
 }*/
-//Problema 3 Fechas válidas
+/*//Problema 3 Fechas validas
 int main(){
     unsigned short int mes;
     unsigned short int dia;
@@ -57,4 +57,60 @@ int main(){
        cout<<dia<<'/'<<mes<<" es una fecha valida."<<endl;
     }
     return 0;
+}*/
+/*//Problema 5 Patron diamante
+int main(){
+    int num;
+    cout<<"Ingrese un numero: "<<endl;
+    cin>>num;
+    for (int i=0;i<(num/2)+1;i++){ // parte de arriba
+        for (int c=num/2-i;c>0;c--){ //Espacios
+            cout<<" ";
+        }
+        for (int c=0;c<(i*2)+1;c++){ //Asteriscos
+            cout<<"*";
+        }
+        cout<<endl;
+
+    }
+    for (int i=(num/2)-1;i>=0;i--){ //Parte de abajo
+        for (int c=num/2-i;c>0;c--){ //Espacios
+            cout<<" ";
+        }
+        for (int c=0;c<(i*2)+1;c++){ //Asteriscos
+            cout<<"*";
+        }
+        cout<<endl;
+
+    }
+    return 0;
+}*/
+/*//Problema 7 Fibonacci suma de pares
+int main(){
+    unsigned int pares=0;
+    unsigned int actual1=1;
+    unsigned int actual2=1;
+    unsigned int num;
+    cout<<"Ingresar un numero:";
+    cin>>num;
+    while (actual2<num){
+        actual2=actual1+actual2;
+        actual1=actual2-actual1;
+        if (actual2%2==0 && actual2<=num){
+            pares+=actual2;
+        }
+    }
+    cout<<"El resultado de la suma es: "<<pares<<endl;
+}*/
+//Problema 8 Cifras al cuadrado
+int main(){
+    int suma=0;
+    int num;
+    cout<<"Ingrese un numero: "<<endl;
+    cin>>num;
+    for (int i=num;i>0;i=i/10){
+        suma+=pow(i%10,i%10);
+    }
+    cout<<"El resultado de la suma es de "<<suma<<endl;
+return 0;
 }
