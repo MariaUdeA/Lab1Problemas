@@ -2,8 +2,8 @@
 //Hecho por Maria del Mar Arbelaez
 //Problemas lab1
 #include <iostream>
-
 using namespace std;
+
 /*//Problema 1 Consonantes vs vocales vs otro
 int main()
 {
@@ -101,6 +101,7 @@ int main(){
         }
     }
     cout<<"El resultado de la suma es: "<<pares<<endl;
+    return 0;
 }*/
 /*//Problema 9 Cifras elevadas a sí mismas
 int main(){
@@ -114,28 +115,32 @@ int main(){
     cout<<"El resultado de la suma es de "<<suma<<endl;
 return 0;
 }*/
-//Problema 11 MCM de numeros pasados
-//Ir sacando el mcm de los numeros si mcm%num=0, no se agrega el num, si si se agrega el producto que le falte
+//Problema 11 MCM de numeros pasados REVISAR COUT
+//Va sacando el mcm entre los numeros anteriores, uno a uno
+int mcm(int vabA,int vabB);
 int main(){
-    int mcd1=1;
-    int mcd2;
     int num;
-    int mcm=1;
-    cout << "Ingrese un numero: " <<endl;
-    cin >> num;
-    for (int c=0;c<=num;c++){
-        for (int i=1;i<=c/2 || i<=mcd2/2 ;i++){
-            if (c % i==0 && mcd2 % i==0){
-                mcd2=i;
-            }
-        }
-        mcm=(c*mcd2) / mcd2;
+    int mcm1=1;
+    cout<<"Ingrese un numero: "<<endl;
+    cin>>num;
+    for (int i=1;i<=num;i++){
+        mcm1=mcm(i,mcm1);
     }
+    cout<<"El mcm de los numeros anteriores de "<<num<<" es "<<mcm1<<endl;
 
-    cout<<"El minimo comun multiplo es "<<mcm<<endl;
     return 0;
 }
+int mcm(int vabA, int vabB){
+    int mcd;
+    for (int i=1;i<=vabA/2 || i<=vabB/2 ;i++){
+        if (vabA % i==0 && vabB % i==0){
+            mcd=i;
+        }
+    }
+    mcd=(vabA*vabB) / mcd;
+    return mcd;
 
+}
 /*// Problema 13 Suma de primos menores
 int main(){
     int num;
@@ -158,4 +163,29 @@ int main(){
     return 0;
 }*/
 //Problema 15 Patron de numeros
-//Problema 17
+/*//Problema 17 Divisores de sucesión
+int divs(unsigned int num);
+int main(){
+    unsigned int max;
+    unsigned int divisores=0;
+    unsigned int c=0;
+    cout<<"Ingrese un numero: "<<endl;
+    cin>>max;
+    while (divisores<max){
+        c++;
+        divisores=divs((c*(c+1))/2);
+    }
+    cout<<"El numero es: "<<(c*(c+1))/2<<" que tiene "<<divisores<<" divisores"<<endl;
+    return 0;
+}
+int divs(unsigned int num)
+{
+    unsigned int divis=0;
+    for(int i=num/2;i>0;i--)
+       {
+       if (num%i==0){
+           divis++;
+       }
+    }
+return divis+1;
+}*/
