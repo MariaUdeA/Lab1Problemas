@@ -102,7 +102,7 @@ int main(){
     }
     cout<<"El resultado de la suma es: "<<pares<<endl;
 }*/
-//Problema 8 Cifras al cuadrado
+/*//Problema 9 Cifras elevadas a sí mismas
 int main(){
     int suma=0;
     int num;
@@ -113,4 +113,49 @@ int main(){
     }
     cout<<"El resultado de la suma es de "<<suma<<endl;
 return 0;
+}*/
+//Problema 11 MCM de numeros pasados
+//Ir sacando el mcm de los numeros si mcm%num=0, no se agrega el num, si si se agrega el producto que le falte
+int main(){
+    int mcd1=1;
+    int mcd2;
+    int num;
+    int mcm=1;
+    cout << "Ingrese un numero: " <<endl;
+    cin >> num;
+    for (int c=0;c<=num;c++){
+        for (int i=1;i<=c/2 || i<=mcd2/2 ;i++){
+            if (c % i==0 && mcd2 % i==0){
+                mcd2=i;
+            }
+        }
+        mcm=(c*mcd2) / mcd2;
+    }
+
+    cout<<"El minimo comun multiplo es "<<mcm<<endl;
+    return 0;
 }
+
+/*// Problema 13 Suma de primos menores
+int main(){
+    int num;
+    int divis;
+    int suma=0;
+    cout<<"Ingrese un numero: "<<endl;
+    cin>>num;
+    for (int i=2;i<=num;i++){
+        divis=0;
+        for (int c=i/2;c>=1;c--){
+            if (i%c==0){
+                divis++;
+            }
+        }
+        if (divis==1){
+            suma+=i;
+        }
+    }
+    cout<<"La suma de los primos es: "<<suma<<endl;
+    return 0;
+}*/
+//Problema 15 Patron de numeros
+//Problema 17
