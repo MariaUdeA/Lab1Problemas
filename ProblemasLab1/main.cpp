@@ -10,15 +10,15 @@ int main()
     char letra;
     cout << "Ingrese una caracter:" << endl;
     cin>>letra;
-    letra=tolower(letra);
-    if (letra==97 || letra==101 || letra==105 || letra==111 || letra==117){ //Vocales
-        cout<<"Es una vocal"<<endl;
+    char letre=tolower(letra);
+    if (letre==97 || letre==101 || letre==105 || letre==111 || letre==117){ //Vocales
+        cout<<letra<<" es una vocal"<<endl;
     }
-    else if (letra>=97 && letra<=122){ //Consonantes
-        cout<<"Es una consonante"<<endl;
+    else if (letre>=97 && letre<=122){ //Consonantes
+        cout<<letra<<" es una consonante"<<endl;
     }
     else { //Otros
-        cout<<"No es una letra."<<endl;
+        cout<<letra<<" no es una letra."<<endl;
     }
 
     return 0;
@@ -35,23 +35,23 @@ int main(){
         cout<<mes<<" es un mes invalido"<<endl;
     }
     else if (mes==0 || dia==0){
-        cout<<dia<<'/'<<mes<<" no es una fecha valida."<<endl;
+        cout<<dia<<'/'<<mes<<" es una fecha invalida."<<endl;
     }
     else if (mes<=7 && mes%2!=0 && dia>31){
-        cout<<dia<<'/'<<mes<<" no es una fecha valida."<<endl;
+        cout<<dia<<'/'<<mes<<" es una fecha invalida."<<endl;
     }
     else if (mes>7 && mes %2==0 && dia>31){
-        cout<<dia<<'/'<<mes<<" no es una fecha valida."<<endl;
+        cout<<dia<<'/'<<mes<<" es una fecha invalida."<<endl;
     }
     else if ((mes==4||mes==6||mes==9||mes==11)&&dia>30){
-        cout<<dia<<'/'<<mes<<" no es una fecha valida."<<endl;
+        cout<<dia<<'/'<<mes<<" es una fecha invalida."<<endl;
     }
     else if (mes==2){
         if (dia>29){
-            cout<<dia<<'/'<<mes<<" no es una fecha valida."<<endl;
+            cout<<dia<<'/'<<mes<<" es una fecha invalida."<<endl;
         }
         else if (dia==29)
-            cout<<dia<<'/'<<mes<<" es una fecha valida en bisiesto."<<endl;
+            cout<<dia<<'/'<<mes<<" es una valida en bisiesto."<<endl;
     }
     else{
        cout<<dia<<'/'<<mes<<" es una fecha valida."<<endl;
@@ -112,7 +112,7 @@ int main(){
     for (int i=num;i>0;i=i/10){
         suma+=pow(i%10,i%10);
     }
-    cout<<"El resultado de la suma es de "<<suma<<endl;
+    cout<<"El resultado de la suma es: "<<suma<<endl;
 return 0;
 }*/
 /*//Problema 11 MCM de numeros pasados
@@ -128,7 +128,7 @@ int main(){
         mcm1=mcm(i,mcm1);
     }
 
-    cout<<"El mcm de los numeros anteriores de "<< num <<" es "<< mcm1<<endl;
+    cout<<"El minimo comun multiplo es: "<< mcm1<<endl;
 return 0;
 }
 int mcm(int vabA, int vabB){
@@ -159,10 +159,10 @@ int main(){
             suma+=i;
         }
     }
-    cout<<"La suma de los primos es: "<<suma<<endl;
+    cout<<"El resultado de la suma es: "<<suma<<endl;
     return 0;
 }*/
-//Problema 15 Patron de numeros
+/*//Problema 15 Patron de numeros (Suma de esquinas)
 int main(){
     int num;
     int suma=1;
@@ -177,8 +177,8 @@ int main(){
             suma+=corner;
         }
     }
-    cout<<"En una espiral de "<<num<<"x"<<num<<", la suma es "<<suma<<endl;
-}
+    cout<<"En una espiral de "<<num<<"x"<<num<<", la suma es: "<<suma<<endl;
+}*/
 /*//Problema 17 Divisores de sucesión
 int divs(unsigned int num);
 int main(){
