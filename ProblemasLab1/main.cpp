@@ -115,7 +115,7 @@ int main(){
     cout<<"El resultado de la suma es de "<<suma<<endl;
 return 0;
 }*/
-//Problema 11 MCM de numeros pasados REVISAR COUT
+/*//Problema 11 MCM de numeros pasados
 //Va sacando el mcm entre los numeros anteriores, uno a uno
 int mcm(int vabA,int vabB);
 int main(){
@@ -123,15 +123,16 @@ int main(){
     int mcm1=1;
     cout<<"Ingrese un numero: "<<endl;
     cin>>num;
+
     for (int i=1;i<=num;i++){
         mcm1=mcm(i,mcm1);
     }
-    cout<<"El mcm de los numeros anteriores de "<<num<<" es "<<mcm1<<endl;
 
-    return 0;
+    cout<<"El mcm de los numeros anteriores de "<< num <<" es "<< mcm1<<endl;
+return 0;
 }
 int mcm(int vabA, int vabB){
-    int mcd;
+    int mcd=1;
     for (int i=1;i<=vabA/2 || i<=vabB/2 ;i++){
         if (vabA % i==0 && vabB % i==0){
             mcd=i;
@@ -139,8 +140,7 @@ int mcm(int vabA, int vabB){
     }
     mcd=(vabA*vabB) / mcd;
     return mcd;
-
-}
+}*/
 /*// Problema 13 Suma de primos menores
 int main(){
     int num;
@@ -163,6 +163,22 @@ int main(){
     return 0;
 }*/
 //Problema 15 Patron de numeros
+int main(){
+    int num;
+    int suma=1;
+    int c=0;
+    int corner=1;
+    cout<<"Ingrese un numero: "<<endl;
+    cin>>num;
+    for (int i=1;i<=num/2;i++){
+        c+=2;
+        for (int w=1;w<=4;w++){
+            corner+=c;
+            suma+=corner;
+        }
+    }
+    cout<<"En una espiral de "<<num<<"x"<<num<<", la suma es "<<suma<<endl;
+}
 /*//Problema 17 Divisores de sucesión
 int divs(unsigned int num);
 int main(){
