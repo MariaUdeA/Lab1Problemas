@@ -1,8 +1,8 @@
 //Diciembre, 2021
 //Hecho por Maria del Mar Arbelaez
 //Problemas lab1
-#include <iostream>
-using namespace std;
+//#include <iostream>
+//using namespace std;
 
 /*//Problema 1 Consonantes vs vocales vs otro
 int main()
